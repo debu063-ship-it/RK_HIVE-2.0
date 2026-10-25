@@ -1,0 +1,15 @@
+{
+  "name": "hive-rk-enterprise",
+  "version": "1.0.0",
+  "description": "Hive RK Enterprise - Lounges & Automobiles in Asansol",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "jpeg-js": "^0.4.4",
+    "pngjs": "^7.0.0",
+    "vite": "^6.0.0"
+  }
+}
