@@ -40,20 +40,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalDetails = {
     lounge1: {
       title: 'HIVE THE LOUNGE RK',
-      tag: '01 / CAFÉ & LOUNGE · GALAXY MALL',
-      desc: 'Settle in, catch up, and let the evening unfold. A lively café and lounge for music, conversations, and time with your people.',
-      rating: '⭐ 4.1 / 5 · 446 Google Reviews',
+      tag: '01 / NIGHTLIFE & LOUNGE · GALAXY MALL',
+      desc: 'Settle in, catch up, and let the evening unfold. Atmospheric soundscapes, private leather booths, signature hookah, and evening celebrations in central Asansol.',
+      rating: '4.1 / 5 · 446 Google Reviews',
       hours: 'Closes at Midnight · ₹400–600 per person',
       address: 'Near Galaxy Mall, Jaganath Plaza, Girls College Road, Asansol, West Bengal 713325',
       phone: '+91 96143 72650',
       maps: 'https://www.google.com/maps/search/?api=1&query=Hive%20The%20Lounge%20RK%20Asansol',
-      images: ['images/lounge1_interior.png', 'images/lounge1_thumb.png', 'images/lounge1_photo3.png']
+      images: ['images/hive_party_lounge.jpg', 'images/lounge1_interior.png', 'images/lounge1_thumb.png', 'images/lounge1_photo3.png']
     },
     auto: {
       title: 'HIVE RK ENTERPRISE AUTOMOBILES',
       tag: '02 / PRE-OWNED MOTORCYCLES & SCOOTERS',
       desc: 'Discover pre-owned motorcycles in Asansol. Visit the showroom, explore inspected bikes, and find a ride that feels right for you.',
-      rating: '⭐ 4.9 / 5 · 50 Justdial Ratings',
+      rating: '4.9 / 5 · 50 Justdial Ratings',
       hours: 'Open Daily · Closes at 10:00 PM',
       address: 'Shakespeare Sarani, near Gitanjali Dhaba, Asansol, West Bengal',
       phone: '+91 96143 72650',
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'HIVE THE LOUNGE RK 2.0',
       tag: '03 / 24-HOUR CAFÉ & LOUNGE',
       desc: 'A little greenery, a little glow, and plenty of room to make memories. Meet over a bite, a drink, or a conversation that runs a little longer.',
-      rating: '⭐ 4.6 / 5 · 100 Google Reviews',
+      rating: '4.6 / 5 · 100 Google Reviews',
       hours: 'Open 24 Hours Daily · ₹200–1,000 per person',
       address: 'Shakespeare Sarani, near Blessed Hospital, Gobindapur, Asansol, West Bengal 713305',
       phone: '+91 96143 72650',
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
-  document.querySelectorAll('.btn-tap-more, .btn-auto-modal').forEach(btn => {
+  document.querySelectorAll('[data-modal]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const key = btn.getAttribute('data-modal');
