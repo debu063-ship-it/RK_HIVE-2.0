@@ -141,22 +141,123 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Mobile menu toggle
-  const menuToggle = document.getElementById('menuToggle');
-  const headerNav = document.getElementById('headerNav');
-  if (menuToggle && headerNav) {
-    menuToggle.addEventListener('click', () => {
-      const isVisible = headerNav.style.display === 'flex';
-      headerNav.style.display = isVisible ? 'none' : 'flex';
-      headerNav.style.position = 'absolute';
-      headerNav.style.top = '72px';
-      headerNav.style.left = '0';
-      headerNav.style.width = '100%';
-      headerNav.style.flexDirection = 'column';
-      headerNav.style.padding = '24px';
-      headerNav.style.background = 'rgba(24, 24, 24, 0.98)';
-      headerNav.style.borderBottom = '1px solid var(--color-charcoal-border)';
+  // =========================================================================
+  // Header Scroll & Active Section Tracking
+  // =========================================================================
+  const navbar = document.getElementById('navbar');
+  if (navbar) {
+    const handleScroll = () => {
+      if (window.scrollY > 40) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  }
+
+  // Active navigation spy
+  const navItems = document.querySelectorAll('.nav-item');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  const sections = document.querySelectorAll('main > section[id]');
+
+  function updateActiveNav(activeId) {
+    navItems.forEach(item => {
+      const href = item.getAttribute('href');
+      if (href === `#${activeId}`) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+
+    mobileNavLinks.forEach(item => {
+      const href = item.getAttribute('href');
+      if (href === `#${activeId}`) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
     });
   }
+
+  if ('IntersectionObserver' in window && sections.length > 0) {
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          updateActiveNav(entry.target.id);
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    sections.forEach(sec => navObserver.observe(sec));
+  }
+
+  // =========================================================================
+  // Accessible Mobile Navigation Drawer
+  // =========================================================================
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileNav = document.getElementById('mobileNav');
+  const mobileNavClose = document.getElementById('mobileNavClose');
+  const mobileNavBackdrop = document.getElementById('mobileNavBackdrop');
+
+  function openMobileMenu() {
+    if (!mobileNav || !menuToggle) return;
+    mobileNav.classList.add('open');
+    mobileNav.setAttribute('aria-hidden', 'false');
+    menuToggle.classList.add('active');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileMenu() {
+    if (!mobileNav || !menuToggle) return;
+    mobileNav.classList.remove('open');
+    mobileNav.setAttribute('aria-hidden', 'true');
+    menuToggle.classList.remove('active');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  if (menuToggle) {
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (mobileNav?.classList.contains('open')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+  }
+
+  if (mobileNavClose) mobileNavClose.addEventListener('click', closeMobileMenu);
+  if (mobileNavBackdrop) mobileNavBackdrop.addEventListener('click', closeMobileMenu);
+
+  // Close mobile drawer when any navigation link is clicked
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMobileMenu();
+    });
+  });
+
+  // Reset mobile menu state on viewport resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900 && mobileNav?.classList.contains('open')) {
+      closeMobileMenu();
+    }
+  }, { passive: true });
+
+  // Keyboard navigation: Close menu or modal on Escape
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (mobileNav?.classList.contains('open')) {
+        closeMobileMenu();
+      }
+      if (modal?.classList.contains('active')) {
+        closeModal();
+      }
+    }
+  });
 
 });
