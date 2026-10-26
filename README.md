@@ -11,7 +11,7 @@ The application showcases the enterprise's three primary business ventures:
 
 ## Design System
 
-- **Primary Colors**: Charcoal (`#242424`), Pure White (`#FFFFFF`), and Electric Lime (`#C6FF35`).
+- **Primary Colors**: Charcoal (`#242424`), Pure White (`#FFFFFF`), and Champagne (`#C7A875`).
 - **Typography**: Modern geometric sans-serif **Manrope** (Headings) and **Inter** (UI, body, and metadata).
 - **Interactive Features**:
   - Interactive 3D mouse parallax tilt showcase featuring the founder cutout and motorcycles.

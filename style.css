@@ -1,6 +1,6 @@
 /* ==========================================================================
    HIVE RK ENTERPRISE — BRAND DESIGN SYSTEM
-   Palette: Charcoal (#242424), White (#FFFFFF), Electric Lime (#C6FF35)
+   Palette: Charcoal (#242424), White (#FFFFFF), Champagne (#C7A875)
    Typography: Manrope & Inter
    ========================================================================== */
 
@@ -19,10 +19,15 @@
   --color-text-muted: #8E8E8E;
   --color-text-dim: #636363;
 
-  /* Accent Highlight — Electric Lime (Used Sparingly) */
-  --color-lime: #C6FF35;
-  --color-lime-hover: #b5ee2a;
-  --color-lime-subtle: rgba(198, 255, 53, 0.12);
+  /* Accent Highlight — Champagne (#C7A875) */
+  --color-champagne: #C7A875;
+  --color-champagne-hover: #d5b987;
+  --color-champagne-subtle: rgba(199, 168, 117, 0.14);
+
+  /* Brand Accent Tokens & Compatibility */
+  --color-lime: var(--color-champagne);
+  --color-lime-hover: var(--color-champagne-hover);
+  --color-lime-subtle: var(--color-champagne-subtle);
 
   /* Typography */
   --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -1835,7 +1840,7 @@ img {
 }
 
 .auto-service-item:hover {
-  border-color: rgba(198, 255, 53, 0.35);
+  border-color: rgba(199, 168, 117, 0.35);
 }
 
 .service-icon-box {
