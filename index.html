@@ -60,7 +60,8 @@
     <nav class="header-nav" id="headerNav">
       <a href="#showcase" class="nav-item active" data-nav="showcase">OVERVIEW</a>
       <a href="#about" class="nav-item" data-nav="about">ABOUT US</a>
-      <a href="#features" class="nav-item" data-nav="features">VENTURES</a>
+      <a href="#features" class="nav-item" data-nav="features">LOUNGES</a>
+      <a href="#automobiles" class="nav-item" data-nav="automobiles">AUTOMOBILES</a>
       <a href="#reviews" class="nav-item" data-nav="reviews">REVIEWS</a>
       <a href="#contact" class="nav-item" data-nav="contact">LOCATIONS</a>
     </nav>
@@ -120,29 +121,29 @@
 
             <!-- Factual Service Verification Rail -->
             <div class="hero-fact-strip" aria-label="Enterprise venture summary">
-              <div class="hero-fact-card">
+              <a href="#features" class="hero-fact-card">
                 <span class="fact-num">01</span>
                 <div class="fact-detail">
                   <strong class="fact-title">Hive The Lounge RK</strong>
                   <span class="fact-sub">Galaxy Mall &middot; Music &amp; Dining</span>
                 </div>
-              </div>
+              </a>
 
-              <div class="hero-fact-card">
+              <a href="#features" class="hero-fact-card">
                 <span class="fact-num">02</span>
                 <div class="fact-detail">
                   <strong class="fact-title">Hive Lounge RK 2.0</strong>
                   <span class="fact-sub">Shakespeare Sarani &middot; Open 24 Hours</span>
                 </div>
-              </div>
+              </a>
 
-              <div class="hero-fact-card">
+              <a href="#automobiles" class="hero-fact-card">
                 <span class="fact-num">03</span>
                 <div class="fact-detail">
                   <strong class="fact-title">Hive Automobiles</strong>
                   <span class="fact-sub">Inspected Pre-Owned Motorcycles</span>
                 </div>
-              </div>
+              </a>
             </div>
 
           </div>
@@ -279,82 +280,247 @@
       </div>
     </section>
 
-    <!-- Screen 3: 3D Curved Showcase Cards Carousel -->
+    <!-- Screen 3: Hospitality Lounges Showcase -->
     <section class="screen-cards" id="features">
       <div class="cards-header-block reveal-up">
-        <span class="cards-eyebrow">OUR THREE VENTURES</span>
-        <h2 class="cards-main-title">EXPLORE THE DESTINATIONS</h2>
-        <p class="cards-subtitle">Select any card to view photos, prices, reviews, and visiting hours.</p>
+        <span class="cards-eyebrow">HOSPITALITY DESTINATIONS</span>
+        <h2 class="cards-main-title">Two Distinctive Lounges</h2>
+        <p class="cards-subtitle">From Galaxy Mall vibes and live music to Shakespeare Sarani's 24-hour dining garden.</p>
       </div>
 
-      <!-- 3D Perspective Cards Stage -->
-      <div class="curved-cards-stage" id="curvedStage">
+      <!-- Balanced Duo Grid for Lounges -->
+      <div class="lounges-duo-grid reveal-up">
         
-        <!-- Card 1: Lounge RK -->
-        <div class="curved-card side-card prev-card" data-card="0" id="card0">
-          <div class="curved-card-inner">
-            <div class="card-media-box">
-              <img src="images/lounge1_thumb.png" alt="Hive The Lounge RK" class="card-media-img">
-              <div class="card-tag">01 / CAFÉ &amp; LOUNGE</div>
+        <!-- Venue 1: Hive The Lounge RK -->
+        <article class="lounge-showcase-card">
+          <div class="lounge-media-wrap">
+            <img src="images/lounge1_thumb.png" alt="Hive The Lounge RK at Galaxy Mall Asansol" class="lounge-media-img" width="600" height="400">
+            <div class="lounge-tag">01 / GALAXY MALL</div>
+          </div>
+          <div class="lounge-content-wrap">
+            <div class="lounge-header-row">
+              <h3 class="lounge-title">Hive The Lounge RK</h3>
+              <span class="lounge-score">&#9733; 4.1 / 5 (446 Reviews)</span>
             </div>
-            <div class="card-body-box">
-              <h3 class="card-venture-title">Hive The Lounge RK</h3>
-              <p class="card-venture-desc">Lively music, conversations, and relaxing hookah atmosphere.</p>
-              <div class="card-meta-line">
-                <span class="meta-rating">⭐ 4.1 / 5 (446 reviews)</span>
-                <span class="meta-price">₹400–600 / person</span>
-              </div>
+            <p class="lounge-desc">Lively music, conversations, signature drinks, and relaxing hookah atmosphere in central Asansol.</p>
+            <div class="lounge-meta-pills">
+              <span class="lounge-pill">&#8377;400–600 per person</span>
+              <span class="lounge-pill">Closes at Midnight</span>
+              <span class="lounge-pill">Galaxy Mall / Jaganath Plaza</span>
+            </div>
+            <div class="lounge-card-actions">
               <button class="btn-tap-more" data-modal="lounge1">VIEW DETAILS &amp; GALLERY</button>
+              <a href="https://www.google.com/maps/search/?api=1&query=Hive%20The%20Lounge%20RK%20Asansol" target="_blank" rel="noopener noreferrer" class="link-directions-sm">Directions &rarr;</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- Card 2: Automobiles (Active Main in Center) -->
-        <div class="curved-card center-card active-card" data-card="1" id="card1">
-          <div class="curved-card-inner">
-            <div class="card-media-box">
-              <img src="images/auto_thumb.png" alt="Hive RK Enterprise Automobiles" class="card-media-img">
-              <div class="card-tag accent">02 / PRE-OWNED MOTORCYCLES</div>
-            </div>
-            <div class="card-body-box">
-              <h3 class="card-venture-title">Hive RK Automobiles</h3>
-              <p class="card-venture-desc">Quality verified pre-owned motorcycles &amp; scooters with transparent deals.</p>
-              <div class="card-meta-line">
-                <span class="meta-rating highlight">⭐ 4.9 / 5 (50 Justdial)</span>
-                <span class="meta-price">Closes 10 PM</span>
-              </div>
-              <button class="btn-tap-more" data-modal="auto">VIEW DETAILS &amp; GALLERY</button>
-            </div>
+        <!-- Venue 2: Hive The Lounge RK 2.0 -->
+        <article class="lounge-showcase-card highlight-card">
+          <div class="lounge-media-wrap">
+            <img src="images/lounge2_photo2.png" alt="Hive The Lounge RK 2.0 at Shakespeare Sarani Asansol" class="lounge-media-img" width="600" height="400">
+            <div class="lounge-tag accent">02 / OPEN 24 HOURS</div>
           </div>
-        </div>
-
-        <!-- Card 3: Lounge 2.0 -->
-        <div class="curved-card side-card next-card" data-card="2" id="card2">
-          <div class="curved-card-inner">
-            <div class="card-media-box">
-              <img src="images/lounge2_photo2.png" alt="Hive The Lounge RK 2.0" class="card-media-img">
-              <div class="card-tag">03 / CAFÉ &amp; LOUNGE 2.0</div>
+          <div class="lounge-content-wrap">
+            <div class="lounge-header-row">
+              <h3 class="lounge-title">Hive The Lounge RK 2.0</h3>
+              <span class="lounge-score accent">&#9733; 4.6 / 5 (100 Reviews)</span>
             </div>
-            <div class="card-body-box">
-              <h3 class="card-venture-title">Hive The Lounge RK 2.0</h3>
-              <p class="card-venture-desc">Ambient greenery, evening glow, and 24-hour delicious dining.</p>
-              <div class="card-meta-line">
-                <span class="meta-rating">⭐ 4.6 / 5 (100 reviews)</span>
-                <span class="meta-price">Open 24 Hours</span>
-              </div>
+            <p class="lounge-desc">Ambient open-air greenery, warm evening glow, and 24-hour kitchen serving multi-cuisine dining.</p>
+            <div class="lounge-meta-pills">
+              <span class="lounge-pill">&#8377;200–1,000 per person</span>
+              <span class="lounge-pill accent">Open 24/7 Daily</span>
+              <span class="lounge-pill">Shakespeare Sarani, Gobindapur</span>
+            </div>
+            <div class="lounge-card-actions">
               <button class="btn-tap-more" data-modal="lounge2">VIEW DETAILS &amp; GALLERY</button>
+              <a href="https://www.google.com/maps/search/?api=1&query=Hive%20The%20Lounge%20RK%202.0%20Asansol" target="_blank" rel="noopener noreferrer" class="link-directions-sm">Directions &rarr;</a>
             </div>
           </div>
-        </div>
+        </article>
 
       </div>
+    </section>
 
-      <!-- Carousel Navigation Sub-Tabs -->
-      <div class="curved-tabs-bar">
-        <button class="curved-tab active" data-filter="0">TOP FEATURES</button>
-        <button class="curved-tab" data-filter="1">GALLERY</button>
-        <button class="curved-tab" data-filter="2">SPECIFICATIONS</button>
-        <button class="curved-tab" data-filter="3">CONTACT &amp; MAPS</button>
+    <!-- Screen 4: Dedicated Automobile Business Section -->
+    <section class="screen-automobile" id="automobiles">
+      <div class="automobile-container">
+        
+        <!-- Automobile Editorial Header Block -->
+        <div class="automobile-header-block reveal-up">
+          <div class="automobile-eyebrow">
+            <span class="eyebrow-accent-bar" aria-hidden="true"></span>
+            <span class="eyebrow-text">03 / PRE-OWNED TWO-WHEELERS &middot; ASANSOL</span>
+          </div>
+          <h2 class="automobile-heading">Hive RK Enterprise Automobiles</h2>
+          <p class="automobile-subtitle">Verified Pre-Owned Motorcycles &amp; Scooters &middot; Shakespeare Sarani Showroom</p>
+        </div>
+
+        <!-- Editorial Dual-Column Layout: Real Vehicle Photography + Practical Services -->
+        <div class="automobile-editorial-grid reveal-up">
+          
+          <!-- Left Column: Authentic Vehicle Photography Showcase -->
+          <div class="automobile-media-column">
+            
+            <!-- Primary Showroom Photo -->
+            <figure class="automobile-figure-main">
+              <div class="auto-img-frame main">
+                <img 
+                  src="images/auto_thumb.png" 
+                  alt="Hive RK Enterprise Automobiles showroom floor with verified motorcycles in Asansol" 
+                  class="auto-photo"
+                  width="680" 
+                  height="510"
+                  loading="lazy"
+                >
+                <div class="auto-badge-overlay">
+                  <span class="auto-badge-dot"></span>
+                  <span class="auto-badge-text">PHYSICAL SHOWROOM &middot; ASANSOL</span>
+                </div>
+              </div>
+              <figcaption class="auto-figure-caption">
+                <span class="caption-showroom-name">Hive RK Enterprise Showroom</span>
+                <span class="caption-verified-tag">&#9733; 4.9 / 5 &middot; 50 Justdial Ratings</span>
+              </figcaption>
+            </figure>
+
+            <!-- Secondary Photo Strip: Interior Signage & Close Vehicle Perspective -->
+            <div class="automobile-photo-strip">
+              <div class="auto-thumb-box">
+                <img 
+                  src="images/auto_photo2.png" 
+                  alt="Hive RK Enterprise Used Bikes &amp; Scooties front desk and bike fleet" 
+                  class="auto-thumb-img"
+                  width="382" 
+                  height="510"
+                  loading="lazy"
+                >
+                <span class="thumb-label">Verified Fleet &amp; Reception Desk</span>
+              </div>
+              <div class="auto-thumb-box">
+                <img 
+                  src="images/auto_photo3.png" 
+                  alt="Motorcycles lined up on the showroom floor at Hive RK Automobiles" 
+                  class="auto-thumb-img"
+                  width="680" 
+                  height="510"
+                  loading="lazy"
+                >
+                <span class="thumb-label">Showroom Floor Perspective</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Factual Description, Actual Services & Enquiry CTAs -->
+          <div class="automobile-content-column">
+            
+            <p class="automobile-lead">
+              Operating on Shakespeare Sarani near Gitanjali Dhaba, Hive RK Enterprise Automobiles curates quality pre-owned motorcycles and scooters. Every vehicle is thoroughly checked for mechanical performance, chassis soundness, and clear documentation before being made available for sale.
+            </p>
+
+            <!-- Actual Automobile Services Matrix -->
+            <div class="auto-services-list" aria-label="Automobile dealership services">
+              
+              <div class="auto-service-item">
+                <div class="service-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div class="service-content">
+                  <h3 class="service-title">Multi-Point Vehicle Inspection</h3>
+                  <p class="service-desc">Engines, brakes, tyres, and electricals are physically inspected so you take home a roadworthy, dependable machine.</p>
+                </div>
+              </div>
+
+              <div class="auto-service-item">
+                <div class="service-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                  </svg>
+                </div>
+                <div class="service-content">
+                  <h3 class="service-title">Clear Registration &amp; Transfer Support</h3>
+                  <p class="service-desc">Transparent ownership transfer guidance, authentic RC verification, and complete paperwork assistance.</p>
+                </div>
+              </div>
+
+              <div class="auto-service-item">
+                <div class="service-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                  </svg>
+                </div>
+                <div class="service-content">
+                  <h3 class="service-title">On-Site Inspection &amp; Test Rides</h3>
+                  <p class="service-desc">Inspect two-wheelers in person, test the ergonomics and clutch, and evaluate road feel at our Shakespeare Sarani location.</p>
+                </div>
+              </div>
+
+              <div class="auto-service-item">
+                <div class="service-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                  </svg>
+                </div>
+                <div class="service-content">
+                  <h3 class="service-title">Fair Market Pricing &amp; Buy/Trade Consultations</h3>
+                  <p class="service-desc">Reasonable market prices with zero hidden commissions. Honest appraisals if you are looking to sell or upgrade.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Factual Dealership Essentials Rail -->
+            <div class="auto-essentials-rail">
+              <div class="essential-cell">
+                <span class="cell-label">SHOWROOM TIMINGS</span>
+                <span class="cell-val">Open Daily &middot; Closes 10:00 PM</span>
+              </div>
+              <div class="essential-cell">
+                <span class="cell-label">SHOWROOM ADDRESS</span>
+                <span class="cell-val">Shakespeare Sarani, near Gitanjali Dhaba, Asansol</span>
+              </div>
+              <div class="essential-cell">
+                <span class="cell-label">DIRECT PHONE</span>
+                <a href="tel:+919614372650" class="cell-link">+91 96143 72650</a>
+              </div>
+            </div>
+
+            <!-- Contact & Enquiry Action Pair -->
+            <div class="auto-actions-wrap">
+              <a href="tel:+919614372650" class="btn-auto-primary">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                <span>Enquire about available bikes</span>
+              </a>
+
+              <a href="https://www.google.com/maps/search/?api=1&query=Hive%20RK%20Enterprise%20Automobiles%20Asansol" target="_blank" rel="noopener noreferrer" class="link-auto-secondary">
+                <span>Get showroom directions</span>
+                <span class="auto-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+
+              <button class="btn-auto-modal" data-modal="auto">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <polyline points="21 15 16 10 5 21"/>
+                </svg>
+                <span>View full gallery &amp; details</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
 

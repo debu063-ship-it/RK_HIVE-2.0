@@ -8,52 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Bold Editorial Hero is static and high-performance.
   // No unnecessary animation loops or floating listeners needed.
 
-  // =========================================================================
-  // 3. Curved 3D Cards Carousel
-  // =========================================================================
-  const cards = [
-    document.getElementById('card0'),
-    document.getElementById('card1'),
-    document.getElementById('card2')
-  ];
-
-  let centerCardIndex = 1;
-
-  function updateCurvedCards() {
-    cards.forEach((card, idx) => {
-      card.classList.remove('center-card', 'prev-card', 'next-card', 'active-card');
-      if (idx === centerCardIndex) {
-        card.classList.add('center-card', 'active-card');
-      } else if (idx === (centerCardIndex + 2) % 3) {
-        card.classList.add('prev-card', 'side-card');
-      } else {
-        card.classList.add('next-card', 'side-card');
-      }
-    });
-
-    document.querySelectorAll('.curved-tab').forEach((tab, idx) => {
-      tab.classList.toggle('active', idx === centerCardIndex);
-    });
-  }
-
-  cards.forEach((card, idx) => {
-    card.addEventListener('click', () => {
-      if (centerCardIndex !== idx) {
-        centerCardIndex = idx;
-        updateCurvedCards();
-      }
-    });
-  });
-
-  document.querySelectorAll('.curved-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      const f = parseInt(tab.getAttribute('data-filter'), 10);
-      if (f < 3) {
-        centerCardIndex = f;
-        updateCurvedCards();
-      }
-    });
-  });
+  // Lounges and Automobile sections are responsive editorial layouts.
 
   // =========================================================================
   // 4. Scroll Reveal Intersection Observer
@@ -169,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
-  document.querySelectorAll('.btn-tap-more').forEach(btn => {
+  document.querySelectorAll('.btn-tap-more, .btn-auto-modal').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const key = btn.getAttribute('data-modal');
