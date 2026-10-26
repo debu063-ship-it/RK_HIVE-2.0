@@ -855,9 +855,32 @@ img {
   position: relative;
 }
 
+.about-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.about-eyebrow .eyebrow-accent-bar {
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-lime);
+  display: inline-block;
+}
+
+.about-eyebrow .eyebrow-text {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--color-lime);
+  text-transform: uppercase;
+}
+
 .about-giant-heading {
   font-family: var(--font-heading);
-  font-size: 64px;
+  font-size: clamp(36px, 4.8vw, 64px);
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--color-white);
@@ -1992,27 +2015,32 @@ img {
   margin-bottom: 48px;
 }
 
-.chapter-badge {
+.reviews-eyebrow {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.reviews-eyebrow .eyebrow-accent-bar {
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-lime);
+  display: inline-block;
+}
+
+.reviews-eyebrow .eyebrow-text {
   font-family: var(--font-body);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.1em;
-  margin-bottom: 12px;
-}
-
-.badge-num {
+  letter-spacing: 0.16em;
   color: var(--color-lime);
-}
-
-.badge-name {
-  color: var(--color-text-muted);
+  text-transform: uppercase;
 }
 
 .reviews-title {
   font-family: var(--font-heading);
-  font-size: 52px;
+  font-size: clamp(32px, 3.8vw, 50px);
   font-weight: 800;
   letter-spacing: -0.025em;
   color: var(--color-white);
@@ -2188,13 +2216,26 @@ img {
 }
 
 .contact-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.contact-eyebrow .eyebrow-accent-bar {
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-lime);
+  display: inline-block;
+}
+
+.contact-eyebrow .eyebrow-text {
   font-family: var(--font-body);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   color: var(--color-lime);
-  margin-bottom: 16px;
-  display: block;
+  text-transform: uppercase;
 }
 
 .contact-row {
@@ -2208,7 +2249,7 @@ img {
 
 .contact-title {
   font-family: var(--font-heading);
-  font-size: 48px;
+  font-size: clamp(32px, 3.8vw, 48px);
   font-weight: 800;
   letter-spacing: -0.025em;
   color: var(--color-white);
@@ -2239,7 +2280,7 @@ img {
 
 .phone-link {
   font-family: var(--font-heading);
-  font-size: 32px;
+  font-size: clamp(24px, 2.5vw, 32px);
   font-weight: 800;
   color: var(--color-white);
   transition: color var(--transition-fast);
@@ -2802,6 +2843,9 @@ img {
 }
 
 @media (max-width: 600px) {
+  .screen-about, .screen-cards, .screen-party-lounge, .screen-automobile, .screen-reviews, .screen-contact {
+    padding: 56px 16px;
+  }
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
@@ -2815,6 +2859,13 @@ img {
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
+  }
+  .about-metrics-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .facility-info {
+    padding: 18px;
   }
   .party-specs-table {
     grid-template-columns: 1fr;
@@ -2863,6 +2914,24 @@ img {
   .automobile-photo-strip {
     grid-template-columns: 1fr;
   }
+  .marquee-card {
+    width: 280px;
+    padding: 18px;
+  }
+  .review-external-links {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-external {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .contact-box {
+    padding: 28px 16px;
+  }
+  .site-footer {
+    padding: 56px 16px 28px;
+  }
   .footer-bottom-bar {
     flex-direction: column;
     align-items: flex-start;
@@ -2875,5 +2944,23 @@ img {
   }
   .legal-divider {
     display: none;
+  }
+}
+
+/* Accessible Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-up {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .marquee-track {
+    animation: none !important;
+    overflow-x: auto;
   }
 }
